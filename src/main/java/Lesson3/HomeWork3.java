@@ -26,20 +26,12 @@ public class HomeWork3 {
         System.out.println(box2.getWeight());
 
         System.out.println(box1.compare(box2));
-
-        removeToBoxApple(box1,box3);
+        box3.removeFromAnotherBox(box1);
+        System.out.println(box3.getWeight());
+        System.out.println(box1.getWeight());
     }
 
-    private static Box<Apple> removeToBoxApple(Box<Apple> box1, Box<Apple> box2){
 
-        Box newBox = new Box(Arrays.asList(box1,box2));
-        return newBox;
-    }
-    private static Box<Orange> removeToBoxOrange(Box<Orange> box1, Box<Orange> box2){
-
-        Box newBox = new Box(Arrays.asList(box1,box2));
-        return newBox;
-    }
 
     private static double getBoxWeight(Box<? extends Fruit> box) {
         double weight = 0;

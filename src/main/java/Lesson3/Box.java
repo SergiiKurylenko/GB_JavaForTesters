@@ -2,6 +2,7 @@ package Lesson3;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 public class Box <E extends Fruit> {
@@ -19,21 +20,27 @@ public class Box <E extends Fruit> {
         return fruits;
     }
 
-    public boolean addFruits(Fruit fruit) {
-        if (fruit.getClass().equals(this.fruits.get(0).getClass())) {
-            this.fruits.add((E) fruit);
-            return true;
-        }
-        return false;
+    public void addFruits(E e) {
+            this.fruits.add(e);
     }
 
     public double getWeight(){
+        if (fruits.isEmpty()) return 0;
         if (fruits.get(0) instanceof Apple) return fruits.size() * 1.0f;
         return fruits.size() * 1.5f;
     }
 
     public boolean compare(Box box){
         return this.getWeight() == box.getWeight() ? true : false;
+    }
+
+    public void removeFromAnotherBox(Box<E> box){
+        this.fruits.addAll(box.getFruits());
+        box.clear();
+    }
+
+    private void clear() {
+        this.fruits.clear();
     }
 
 

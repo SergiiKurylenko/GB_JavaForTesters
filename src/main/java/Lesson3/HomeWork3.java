@@ -24,9 +24,10 @@ public class HomeWork3 {
 
         System.out.println(box1.getWeight());
         System.out.println(box2.getWeight());
-
         System.out.println(box1.compare(box2));
+
         box3.removeFromAnotherBox(box1);
+
         System.out.println(box3.getWeight());
         System.out.println(box1.getWeight());
     }

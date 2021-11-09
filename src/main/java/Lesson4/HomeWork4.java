@@ -16,7 +16,7 @@ public class HomeWork4 {
         phoneBook.add("234-456-765", "Буратино");
         phoneBook.add("234-456-764", "Мальвина");
         phoneBook.add("234-456-763", "Пьеро");
-        phoneBook.add("234-452-765", "Карабас");
+        phoneBook.add("234-452-765", "Карабас-Барабас");
         phoneBook.add("231-456-765", "Буратино");
 
         System.out.println(phoneBook.getPhoneBook());
